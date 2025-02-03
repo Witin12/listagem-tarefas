@@ -15,16 +15,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $prazo_minimo = (new DateTime())->modify('+24 hours')->setTime(date('H'), date('i'), 0);
 
     if (!$prazo_datetime || $prazo_datetime < $prazo_minimo) {
-        die("Erro: O prazo deve ser pelo menos 24 horas à frente.");
-    }
-
-    $sql = "INSERT INTO tarefas (descricao, prazo, colaborador_id, prioridade, data_execucao) 
-            VALUES ('$descricao', '$prazo', '$colaborador', '$prioridade', '$dataExecucao')";
-
-    if ($conn->query($sql) === TRUE) {
-        $mensagem = '<div class="alert alert-success w-50 mx-auto text-center mt-3">Tarefa cadastrada com sucesso!</div>';
+        // die("Erro: O prazo deve ser pelo menos 24 horas à frente.");
+        $mensagem = '<div class="alert alert-danger w-50 mx-auto text-center mt-3"> Erro: O prazo deve ser pelo menos 24 horas à frente! </div>';
     } else {
-        $mensagem = '<div class="alert alert-danger w-50 mx-auto text-center mt-3">Erro ao cadastrar:  ' . $conn->error . '</div>';
+        $sql = "INSERT INTO tarefas (descricao, prazo, colaborador_id, prioridade, data_execucao) 
+        VALUES ('$descricao', '$prazo', '$colaborador', '$prioridade', '$dataExecucao')";
+
+        if ($conn->query($sql) === TRUE) {
+            $mensagem = '<div class="alert alert-success w-50 mx-auto text-center mt-3">Tarefa cadastrada com sucesso!</div>';
+        } else {
+            $mensagem = '<div class="alert alert-danger w-50 mx-auto text-center mt-3">Erro ao cadastrar:  ' . $conn->error . '</div>';
+        }
     }
 }
 

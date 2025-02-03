@@ -30,7 +30,7 @@ CREATE TABLE `colaboradores` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `cpf` (`cpf`),
   UNIQUE KEY `email` (`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -39,7 +39,7 @@ CREATE TABLE `colaboradores` (
 
 LOCK TABLES `colaboradores` WRITE;
 /*!40000 ALTER TABLE `colaboradores` DISABLE KEYS */;
-INSERT INTO `colaboradores` VALUES (1,'Witor','49394120831','witor.santos@unesp.br'),(2,'Teste','12345678991','teste@gmail.com'),(3,'Maria','12332112387','maria@gmail.com'),(5,'Augusto','0987643210','augusto@gmail.com'),(7,'Testando','32165498701','testando@gmail.com');
+INSERT INTO `colaboradores` VALUES (1,'Witor','49394120831','witor.santos@unesp.br');
 /*!40000 ALTER TABLE `colaboradores` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -70,7 +70,7 @@ CREATE TABLE `tarefas` (
 
 LOCK TABLES `tarefas` WRITE;
 /*!40000 ALTER TABLE `tarefas` DISABLE KEYS */;
-INSERT INTO `tarefas` VALUES (1,'Ajustar site ','2025-02-03 20:40:00',1,'Baixa','2025-02-01 21:34:49','2025-02-04 08:40:00');
+INSERT INTO `tarefas` VALUES (1,'Criação de listagem de tarefas utilizando PHP, MySql','2025-02-05 23:59:00',1,'Alta','2025-02-03 22:17:16','2025-02-07 19:15:00');
 /*!40000 ALTER TABLE `tarefas` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -83,4 +83,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-02-01 18:39:47
+-- Dump completed on 2025-02-03 19:29:26
