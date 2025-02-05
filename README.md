@@ -10,11 +10,11 @@ XAMPP (para servidor local)
 INSTRUÇÕES DE INSTALAÇÃO--------------------------------------------------------------------
 1 - Clonar o Repositório
 
-Abra o terminal ou prompt de comando e execute: "git clone https://github.com/seu-usuario/seu-repositorio.git" Ou baixe o arquivo ZIP diretamente do GitHub e extraia.
+Abra o terminal ou prompt de comando e execute: "git clone https://github.com/Witin12/listagem-tarefas.git" Ou baixe o arquivo ZIP diretamente do GitHub e extraia.
 
 2 - Mover os Arquivos
 
-Após extrair ou clonar, mova a pasta do projeto para dentro da pasta htdocs do XAMPP: C:\xampp\htdocs\seu-projeto
+Após extrair ou clonar, mova a pasta do projeto para dentro da pasta htdocs do XAMPP: C:\xampp\htdocs\seu-projeto. Obs: Ou pelo nome que salvar o arquivo na pasta do projeto na pasta htdocs.
 
 3 - Configurar o Banco de Dados
 
